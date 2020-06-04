@@ -1,5 +1,10 @@
 cyrrilyc_alpha = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя'
-cyrrilyc_alpha = {value: key for key, value in dict(enumerate(cyrrilyc_alpha, 1)).items()}
+text = 'варенник'
 
-text = 'шляпа'
-print("".join([str(cyrrilyc_alpha.get(x)) for x in text]))
+cyrrilyc_alpha_dict = dict(enumerate(cyrrilyc_alpha, 1))
+cyrrilyc_alpha_dict = {v: k for k, v in cyrrilyc_alpha_dict.items()}
+
+result = ''
+for c in text:
+    result += str(cyrrilyc_alpha_dict.get(c))
+print(result)
