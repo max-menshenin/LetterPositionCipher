@@ -6,6 +6,5 @@ CYRRILYC_ALPHA_DICT = {v: k for k, v in CYRRILYC_ALPHA_DICT.items()}
 
 result = ''
 for c in text:
-    result += ' ' + str(CYRRILYC_ALPHA_DICT.get(c))
-
+    result += ''.join(str(CYRRILYC_ALPHA_DICT.get(c)))+' '
 print(result)
