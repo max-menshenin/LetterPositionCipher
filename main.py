@@ -7,4 +7,4 @@ CYRRILYC_ALPHA_DICT = {v: k for k, v in CYRRILYC_ALPHA_DICT.items()}
 result = ''
 for c in input_raw:
     result += ''.join(str(CYRRILYC_ALPHA_DICT.get(c))) + ' '
-print(result)
+print(result[:-1])
